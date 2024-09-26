@@ -10,7 +10,7 @@
   width: 400px;
   & button {
     border: none;
-    border-radius: ;
+    border-radius: 6px;
     box-shadow: 2px 2px 4px 4px rgb(62, 88, 97);
     cursor: pointer;
     padding: 10px 10px;

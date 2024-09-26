@@ -18,17 +18,17 @@ const ContactForm = ({ onAddContact }) => {
     options.resetForm();
   };
 
-  const nameRegex = /^[ a-zA-Z\-\’]+$/;
-  const numberRegex = /^[0-9.-]*$/;
+  const nameRe = /^[ a-zA-Z\-\’]+$/;
+  const numberRe = /^[0-9.-]*$/;
 
   const contactFormSchema = Yup.object().shape({
     name: Yup.string()
-      .matches(nameRegex, "Invalid name")
+      .matches(nameRe, "Name is invalid")
       .min(3, "Name is too short!")
       .max(50, "Name should contain max 50 symbols")
       .required("Name is required"),
     number: Yup.string()
-      .matches(numberRegex, "Number is invalid")
+      .matches(numberRe, "Number is invalid")
       .min(3, "Number is too short!")
       .max(50, "Number should contain max 50 symbols")
       .required("Number is required"),
