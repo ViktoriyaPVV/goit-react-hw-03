@@ -1,13 +1,14 @@
 import React from "react";
 import { FaUser, FaPhone } from "react-icons/fa";
+import s from "./Contact.module.css";
 const Contact = ({ id, name, number, onDeleteContact }) => {
   return (
-    <li>
-      <p>
+    <li className={s.item}>
+      <p className={s.text}>
         <FaUser />
         {name}
       </p>
-      <p>
+      <p className={s.text}>
         <FaPhone />
         {number}
       </p>
